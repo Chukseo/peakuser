@@ -28,13 +28,14 @@ class RegisterSerializer(serializers.ModelSerializer):
         # if data['username'].exists():
         #     raise serializers.ValidationError({'username':'Username already taken'})
         # return data
+        
     def create(self,validated_data):
         username = validated_data.pop('username')
         email = validated_data.pop('email')
         password = validated_data.pop('password1')
         
         user = User.objects.create_user(username=username,email=email,password=password)
-        profile = Profile.object.create(
+        profile = Profile.objects.create(
             user = user,
             fullname = validated_data['fullname'],
             phone = validated_data['phone'],
