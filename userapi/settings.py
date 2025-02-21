@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-plks-)42g+66nsuu!lf+ldb@lt8-*a0r)vd+c1*$2#)!u+d*-l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','https://peakuser.onrender.com''peakuser.onrender.com']
+ALLOWED_HOSTS = ['localhost','https://peakuser.onrender.com','peakuser.onrender.com']
 
 
 # Application definition
